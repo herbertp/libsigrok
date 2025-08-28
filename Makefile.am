@@ -987,7 +987,7 @@ $(PDIR)/timestamp: $(PDIR)/sigrok/core/classes.i \
 		$(bindings_cxx_libsigrokcxx_la_include_HEADERS) \
 		$(nodist_bindings_cxx_libsigrokcxx_la_include_HEADERS) \
 		@ORDER@ bindings/cxx/libsigrokcxx.la
-	$(AM_V_at)$(setup_py) clean --all 2>/dev/null
+	$(AM_V_at)$(setup_py) clean --all # 2>/dev/null
 	$(AM_V_GEN)$(setup_py) build_ext --swig "$(SWIG)" --swig-opts '$(swig_defs)' build_py
 	$(AM_V_at): >$@
 
